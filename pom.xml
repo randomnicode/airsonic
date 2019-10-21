@@ -225,7 +225,11 @@
                 <artifactId>tomcat-juli</artifactId>
                 <version>${tomcat.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>org.jsoup</groupId>
+                <artifactId>jsoup</artifactId>
+                <version>1.11.3</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -279,7 +283,7 @@
                         </archive>
                     </configuration>
                 </plugin>
-                <plugin>
+               <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-checkstyle-plugin</artifactId>
                     <version>3.1.0</version>
@@ -448,6 +452,7 @@
                                 <!-- Needed by Apache CXF -->
                                 <ignoredUnusedDeclaredDependency>jakarta.xml.ws:jakarta.xml.ws-api</ignoredUnusedDeclaredDependency>
                                 <ignoredUnusedDeclaredDependency>jakarta.xml.bind:jakarta.xml.bind-api</ignoredUnusedDeclaredDependency>
+                                <ignoredUnusedDeclaredDependency>org.apache.cxf:cxf-rt-frontend-jaxws</ignoredUnusedDeclaredDependency>
                             </ignoredUnusedDeclaredDependencies>
                         </configuration>
                     </execution>
